@@ -10,9 +10,11 @@ http://localhost:8080/user?id=1
 Swagger Testing frontend:
 http://localhost:8080/swagger/index.html
  
-Swagger API-Docs:
+Swagger API-Docs (Spec v2.0):
 http://localhost:8080/v2/api-docs/
 
+Swagger API-Docs (Spec v1.x):
+http://localhost:8080/api-docs/
 
 Swagger Version 1.0.2 on Github:
  * https://github.com/springfox/springfox/tree/pre-2.0 

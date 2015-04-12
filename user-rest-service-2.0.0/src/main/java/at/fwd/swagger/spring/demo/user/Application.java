@@ -1,19 +1,18 @@
 package at.fwd.swagger.spring.demo.user;
 
+import at.fwd.swagger.spring.demo.user.controller.UserController;
+import at.fwd.swagger.spring.demo.user.system.HotReloadConfiguration;
+import at.fwd.swagger.spring.demo.user.system.SpringSwaggerController;
+import com.google.common.base.Predicate;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
-
 import springfox.documentation.service.ApiInfo;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
+import springfox.documentation.swagger.annotations.EnableSwagger;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
-import at.fwd.swagger.spring.demo.user.controller.UserController;
-import at.fwd.swagger.spring.demo.user.system.HotReloadConfiguration;
-import at.fwd.swagger.spring.demo.user.system.SpringSwaggerController;
-
-import com.google.common.base.Predicate;
 //replaces: @ComponentScan @EnableAutoConfiguration @Configuration
 
 /**
@@ -23,6 +22,7 @@ import com.google.common.base.Predicate;
  *
  */
 @SpringBootApplication
+@EnableSwagger
 @EnableSwagger2
 @ComponentScan(basePackageClasses = {
         UserController.class, HotReloadConfiguration.class, SpringSwaggerController.class
